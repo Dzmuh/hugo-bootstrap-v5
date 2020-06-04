@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="{{ with $.Site.LanguageCode }}{{ . }}{{ else }}en{{ end }}">
+    <head>
+        {{/* На странице можно использовать переменные: https://gohugo.io/variables/page/ */}}
+        {{ template "head" . }}
+        {{ template "styles" . }}
+    </head>
+<body>
+    {{- template "header" . -}}
+
+    {{- template "main" . -}}
+
+    {{- template "footer" . -}}
+    <script src="/assets/jquery/jquery.js"></script>
+    <script src="/assets/bootstrap/js/bootstrap.js"></script>
+</body>
+</html>
+{{- define "head" -}}
+    {{ partial "head/default" . }}
+{{- end -}}
+{{- define "styles" -}}
+    {{ partial "head/styles" . }}
+{{- end -}}
+
+{{- define "header" -}}
+    <header>
+    {{ partial "menus/mainmenu/default" . }}
+    </header>
+{{- end -}}
+
+{{- define "main" -}}
+<main class="bd-content py-5" id="content">
+    <div class="container">
+        {{- .Content -}}
+    </div>
+</main>
+{{- end -}}
+
+{{- define "footer" -}}
+    {{ partial "footer/default" . }}
+{{- end -}}
