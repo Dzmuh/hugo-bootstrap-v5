@@ -1,0 +1,10 @@
+<!--
+    TODO: Импортированно, но не интегрировано!
+-->
+<div class="flex flex-wrap">
+    {{ range split .Inner "<--->" }}
+    <div class="flex-even markdown-inner">
+        {{ . | markdownify }}
+    </div>
+    {{ end }}
+</div>
