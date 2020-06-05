@@ -1,18 +1,12 @@
-name = "Den"
-license = "GPLv2"
-licenselink = "https://github.com/shaform/hugo-theme-den/blob/master/LICENSE"
-description = "A port of the Nest Pelican theme for Hugo"
-homepage = "https://github.com/shaform/hugo-theme-den"
-tags = ["responsive", "blog", "clean", "multilingual"]
-features = ["responsive", "blog", "clean", "multilingual"]
+name = "bootstrap-v5"
+license = "MIT"
+licenselink = "https://github.com/Dzmuh/hugo-bootstrap-v5/blob/master/LICENSE"
+description = "bootstrap v5 theme for Hugo"
+homepage = "https://github.com/Dzmuh/hugo-bootstrap-v5"
+tags = ["multilingual"]
+features = ["multilingual"]
 min_version = "0.41"
 
 [author]
-  name = "shaform"
-  homepage = "https://github.com/shaform/"
-
-# If porting an existing theme
-[original]
-  name = "Nest"
-  homepage = "https://github.com/molivier/nest"
-  repo = "https://github.com/molivier/nest"
+  name = "dzmuh"
+  homepage = "https://github.com/dzmuh/"
