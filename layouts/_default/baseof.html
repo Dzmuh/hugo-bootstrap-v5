@@ -11,8 +11,6 @@
     {{- template "main" . -}}
 
     {{- template "footer" . -}}
-    <script src="/assets/jquery/jquery.js"></script>
-    <script src="/assets/bootstrap/js/bootstrap.js"></script>
 </body>
 </html>
 {{- define "head" -}}
@@ -37,5 +35,6 @@
 {{- end -}}
 
 {{- define "footer" -}}
-    {{ partial "footer/default" . }}
+    {{ partial "footer/default" . -}}
+    {{ partial "scripts/bootstrap-js" . -}}
 {{- end -}}
