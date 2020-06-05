@@ -1,9 +1,7 @@
-<!--
-    TODO: Импортированно, но не интегрировано!
--->
-<div class="flex flex-wrap">
+{{/* {{< columns >}} <---> {{< /columns >}} */}}
+<div class="d-flex">
     {{ range split .Inner "<--->" }}
-    <div class="flex-even markdown-inner">
+    <div class="p-2 flex-fill">
         {{ . | markdownify }}
     </div>
     {{ end }}
