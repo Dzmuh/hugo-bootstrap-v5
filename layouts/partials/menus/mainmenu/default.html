@@ -15,7 +15,7 @@
                     {{- partial "menus/mainmenu/dropdown-minimal" . -}}
 
                 </ul>
-                {{- with .Site.Language.LanguageName -}}
+                {{- if $.Site.Language.LanguageName -}}
                 <ul class="nav justify-content-end">
 
                     {{- partial "menus/translations/dropdown" . -}}
