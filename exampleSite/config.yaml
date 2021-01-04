@@ -1,0 +1,36 @@
+baseURL: "/"
+
+languageCode: "en-us"
+defaultContentLanguage: "en"
+# defaultContentLanguageInSubdir: false
+
+title: "Bootstrap v5 theme for Hugo"
+
+theme: "hugo-bootstrap5-theme"
+themesdir: "../.."
+
+# Needed for mermaid/katex shortcodes
+#markup:
+#  goldmark:
+#    renderer:
+#      unsafe: true
+#  tableOfContents:
+#    startLevel: 1
+
+#pygmentsCodeFences = true
+#pygmentsStyle = "monokailight"
+
+# Multi-lingual mode config
+# There are different options to translate files
+# See https://gohugo.io/content-management/multilingual/#translation-by-filename
+# And https://gohugo.io/content-management/multilingual/#translation-by-content-directory
+languages:
+  en:
+    languageName: English
+    weight: 1
+  pl:
+    languageName: Polish
+    weight: 2
+  ru:
+    languageName: Russian
+    weight: 3
