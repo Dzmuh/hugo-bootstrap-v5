@@ -14,11 +14,30 @@
 
 {{- end -}}
 
-<!-- TODO: title может быть перегружен -->
-<title>{{ if .IsHome }}{{ .Site.Title | markdownify }} · {{ .Site.Params.description | markdownify }}{{ else }}{{ .Title | markdownify }} · {{ .Site.Title | markdownify }}{{ end }}</title>
+<!--
+
+    TODO: title может быть перегружен
+
+-->
+<title>
+    {{- if .IsHome -}}
+        {{ .Site.Title | markdownify }} · {{ .Site.Params.description | markdownify }}
+    {{- else -}}
+        {{ .Title | markdownify }} · {{ .Site.Title | markdownify }}
+    {{- end -}}
+</title>
 
 <link rel="canonical" href="{{ .Permalink }}">
 
 {{- with .Params.robots -}}
+
 <meta name="robots" content="{{ . }}">
+
 {{- end -}}
+<!--
+
+    TODO Разобраться с метатегами
+
+-->
+<meta property="og:title" content="{{ $.Site.Title }}">
+<meta property="og:description" content="{{ i18n "contentinfo_description" }}">
