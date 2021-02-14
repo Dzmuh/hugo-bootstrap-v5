@@ -2,13 +2,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 {{- if .Description -}}
-<meta name="description" content="{{ .Description | safeHTML }}">
-{{ else if .IsPage }}
+<meta name="description" content="{{ .Description | markdownify }}">
+
+{{- else if .IsPage -}}
+
 <meta name="description" content="{{ .Summary | plainify }}">
-{{ else if .Site.Params.description }}
+
+{{- else if .Site.Params.description -}}
+
 <meta name="description" content="{{ .Site.Params.description | safeHTML }}">
+
 {{- end -}}
 
+<!-- TODO: title может быть перегружен -->
 <title>{{ if .IsHome }}{{ .Site.Title | markdownify }} · {{ .Site.Params.description | markdownify }}{{ else }}{{ .Title | markdownify }} · {{ .Site.Title | markdownify }}{{ end }}</title>
 
 <link rel="canonical" href="{{ .Permalink }}">
