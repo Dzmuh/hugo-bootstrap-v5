@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="{{ with $.Site.LanguageCode }}{{ . }}{{ else }}en{{ end }}">
+<html lang="{{ with .Language }}{{ . }}{{ else }}en{{ end }}">
     <head>
         {{/* На странице можно использовать переменные: https://gohugo.io/variables/page/ */}}
         {{ template "head" . }}
         {{ template "styles" . }}
     </head>
-<body>
+{{ block "body_override" . }}<body>{{ end }}
     {{- template "header" . -}}
 
     {{- template "main" . -}}

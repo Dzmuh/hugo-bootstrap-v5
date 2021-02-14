@@ -1,6 +1,5 @@
 baseURL: "/"
 
-languageCode:           "en-us"
 defaultContentLanguage: "en"
 # defaultContentLanguageInSubdir: false
 
@@ -37,10 +36,10 @@ params:
 languages:
   en:
     languageName: English
-    weight: 1
+    weight: 0
   pl:
     languageName: Polish
-    weight: 2
+    weight: 1
   ru:
     languageName: Russian
-    weight: 3
+    weight: 2
