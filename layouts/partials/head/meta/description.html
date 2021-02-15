@@ -1,0 +1,10 @@
+{{- if .Description }}
+<meta name="description" content="{{ .Description | markdownify }}">
+
+{{- else if .IsPage }}
+<meta name="description" content="{{ .Summary | plainify }}">
+
+{{- else if .Site.Params.description }}
+<meta name="description" content="{{ .Site.Params.description | safeHTML }}">
+
+{{- end }}

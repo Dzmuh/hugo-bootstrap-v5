@@ -1,7 +1,7 @@
 baseURL: "/"
 
 defaultContentLanguage: "en"
-# defaultContentLanguageInSubdir: false
+defaultContentLanguageInSubdir: true
 
 title: "Bootstrap v5 theme for Hugo"
 
@@ -35,11 +35,22 @@ params:
 # And https://gohugo.io/content-management/multilingual/#translation-by-content-directory
 languages:
   en:
+    languageCode: "en"       # http://www.lingoes.net/en/translator/langcode.htm
     languageName: English
     weight: 0
+    GoogleSiteSearchLangCode: "en"
   pl:
+    languageCode: "pl"       # http://www.lingoes.net/en/translator/langcode.htm
     languageName: Polish
     weight: 1
-  ru:
-    languageName: Russian
+    GoogleSiteSearchLangCode: "pl"
+  by:
+    languageCode: "be"
+    languageName: "Беларуская"
     weight: 2
+    GoogleSiteSearchLangCode: "by"
+  ru:
+    languageCode: "ru"       # http://www.lingoes.net/en/translator/langcode.htm
+    languageName: Russian
+    weight: 3
+    GoogleSiteSearchLangCode: "ru"
