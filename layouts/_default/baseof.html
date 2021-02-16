@@ -6,7 +6,8 @@
         {{- template "viewport" . }}
         {{- template "title" . }}
         {{- template "description" . }}
-        {{- template "head" . }}
+        {{- template "opengraph" . }}
+        {{- template "icons" . }}
         {{- template "styles" . }}
     </head>
 {{ block "body_override" . }}<body>{{ end }}
@@ -41,17 +42,22 @@
     {{- partial "head/meta/description" . -}}
 {{- end -}}
 
-{{- define "head" -}}
-    {{ partial "head/default" . }}
+{{- define "opengraph" -}}
+    {{- partial "head/meta/opengraph" . -}}
 {{- end -}}
+
+{{- define "icons" -}}
+    {{ partial "head/meta/icons" . -}}
+{{- end -}}
+
 {{- define "styles" -}}
     {{ partial "head/styles" . }}
 {{- end -}}
 
 {{- define "header" -}}
-    <header>
-    {{ partial "menus/mainmenu/default" . }}
-    </header>
+<header>
+{{ partial "menus/mainmenu/default" . }}
+</header>
 {{- end -}}
 
 {{- define "main" -}}
