@@ -27,7 +27,13 @@ buildFuture:        true
 
 params:
   description:          "Theme for Hugo based  Bootstrap v5 - the most popular HTML, CSS, and JS library in the world."
-  authors:              "Fralkou Ilya A. (aka Dzmuh)"
+  author:               "Fralkou Ilya A. (aka Dzmuh)"
+  twitter:              "Dzmuh"
+  github:               "Dzmuh"
+
+taxonomies:
+  category: "categories"
+  tag:       "tags"
 
 # Multi-lingual mode config
 # There are different options to translate files

@@ -6,10 +6,16 @@
     <head>
         {{/* На странице можно использовать переменные: https://gohugo.io/variables/page/ */}}
         {{- template "charset" . }}
-        {{- template "viewport" . }}
         {{- template "title" . }}
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        {{- template "viewport" . }}
+        <!--
+            TODO: По сути авторов у страницы может быть несколько
+        -->
+        {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
         {{- template "description" . }}
         {{- template "opengraph" . }}
+        {{- template "twittercard" . }}
         {{- template "icons" . }}
         {{- template "styles" . }}
     </head>
@@ -47,6 +53,10 @@
 
 {{- define "opengraph" -}}
     {{- partial "head/meta/opengraph" . -}}
+{{- end -}}
+
+{{- define "twittercard" -}}
+    {{- partial "head/meta/twittercard" . -}}
 {{- end -}}
 
 {{- define "styles" -}}
