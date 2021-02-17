@@ -1,5 +1,8 @@
 <!doctype html>
-<html lang="{{ with .Language }}{{ . }}{{ else }}en{{ end }}">
+{{/*
+    TODO: <html lang="{{ .Site.LanguageCode }}" prefix="og: http://ogp.me/ns#"></html>
+*/}}
+<html lang="{{ .Site.LanguageCode }}">
     <head>
         {{/* На странице можно использовать переменные: https://gohugo.io/variables/page/ */}}
         {{- template "charset" . }}
